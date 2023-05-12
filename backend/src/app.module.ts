@@ -7,6 +7,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
+import { CapacitesModule } from './capacites/capacites.module';
+import { DonModule } from './don/don.module';
+import { FaiblesseModule } from './faiblesse/faiblesse.module';
+import { ElementModule } from './element/element.module';
+import { SortModule } from './sort/sort.module';
 
 const dotenv = require('dotenv');
 dotenv.config()
@@ -30,6 +35,11 @@ console.table(configConnectionDB)
     TypeOrmModule.forRoot(configConnectionDB),
     UserModule,
     AuthModule,
+    CapacitesModule,
+    DonModule,
+    FaiblesseModule,
+    ElementModule,
+    SortModule,
     ],
   controllers: [AppController],
   providers: [AppService],
